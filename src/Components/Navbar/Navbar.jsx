@@ -1,47 +1,53 @@
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import navbar from "../assets/Navbar/Navbar.svg"
+import MenuIcon from '@mui/icons-material/Menu';
+import { Select, Space } from 'antd';
 
 function NavScrollExample() {
+// ctrl alt t menu 
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className='px-[6.94vw] py-[1.38vw] bg-late-700'>
       <Container fluid>
-        <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+        <Navbar.Brand className='cursor-pointer w-[8.33vw] h-[2.43vw] flex items-center'>
+            <img src={navbar} alt="" />
+            </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
-          <Nav
-            className="me-auto my-2 my-lg-0"
-            style={{ maxHeight: '100px' }}
-            navbarScroll
-          >
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Link</Nav.Link>
-            <NavDropdown title="Link" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
-                Something else here
-              </NavDropdown.Item>
-            </NavDropdown>
-            <Nav.Link href="#" disabled>
-              Link
-            </Nav.Link>
-          </Nav>
-          <Form className="d-flex">
-            <Form.Control
-              type="search"
-              placeholder="Search"
-              className="me-2"
-              aria-label="Search"
-            />
-            <Button variant="outline-success">Search</Button>
-          </Form>
+         <div className='pl-[2.56vw] flex items-center gap-[6.28vw]'>
+           <div className='flex gap-[2.77vw]'>
+            <h4 className='flex gap-[10px]'><MenuIcon className='text-cyan-500 w-[2.77vw] h-[2.77vw]'/> Цены на услуги</h4>
+            <h4>О компании</h4>
+            <h4>Отзывы</h4>
+            <h4>Контакты</h4>
+           </div>
+           <div className='flex items-center gap-[1vw]'>
+           <Space  style={{boxShadow: 'none',color: 'blue'}}>
+    <Select
+      defaultValue="Moсква и Подмосковье"
+      style={{
+        width: 200,
+      }}
+      bordered={false}
+      options={[
+        {
+          value: 'Moсква и Подмосковье',
+          label: 'Moсква и Подмосковье',
+        },
+        {
+          value: 'Moсква',
+          label: 'Moсква',
+        },
+        {
+          value: 'Санкт-Петербург',
+          label: 'Санкт-Петербург',
+        },
+      ]}
+    />
+           </Space>
+          <h1 className=''>8 (495) <span className="text-bg"> 106-52-16</span></h1>
+           </div>
+         </div>
         </Navbar.Collapse>
       </Container>
     </Navbar>
