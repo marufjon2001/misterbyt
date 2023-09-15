@@ -4,10 +4,11 @@ module.exports = {
   theme: {
     extend: {
       colors:{
-        bg:"#FED036"
+        nav:"#FED036",
+        black:"#3E3E3E"
       },
       fontFamily:{
-        montserrat:['Montserrat','sans-serif']
+       Proxima: 'Proxima Nova Condensed'
       },
       
     },
