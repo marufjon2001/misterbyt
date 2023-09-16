@@ -5,10 +5,11 @@ module.exports = {
     extend: {
       colors:{
         nav:"#FED036",
-        black:"#3E3E3E"
+        qora:"#3E3E3E"
       },
       fontFamily:{
-       Proxima: 'Proxima Nova Condensed'
+       Proxima: 'Proxima Nova Condensed',
+       Gilroy: "Gilroy-Bold"
       },
       
     },

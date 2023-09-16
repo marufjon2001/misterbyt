@@ -55,7 +55,7 @@ export default function SplitButton() {
             border: "none",
             height: "45px",
             fontFamily: "Inter",
-            color: "#1C1C1C",
+            color: "#3E3E3E",
             fontWeight: "700",
             outline:'none',
             width: '150px'
